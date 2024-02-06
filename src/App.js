@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Grid from './Grid';
+import Grid2 from './Grid2';
+import Grid3 from './Grid3';
+import Grid4 from './Grid4'
+import Grid5 from './Grid5';
+import Grid6 from './Grid6';
+import Grid7 from './Grid7';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      <Grid />
+      <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+      <Grid2 />
+      <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+       <Grid3 />
+       <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+       <Grid4 />
+       <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+       <Grid5 />
+       
+        <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+        <Grid6 />
+        <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
+        <Grid7 />
+        </>
   );
 }
 
