@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter,Routes,Route,Link} from 'react-router-dom';
 import './App.css';
 import Grid from './Grid';
 import Grid2 from './Grid2';
@@ -8,24 +10,46 @@ import Grid5 from './Grid5';
 import Grid6 from './Grid6';
 import Grid7 from './Grid7';
 
+
 function App() {
+
+  // const [data,setData] = useState([])
+  // useEffect(() =>{
+  //   fetch("http://localhost:4000/user/api").then((result)=>{
+  //     result.json.then((resp)=>{
+  //       console.log("result",resp)
+  //       setData(resp);
+  //     })
+  //   })
+  // },[]);
+
+  
   return (
       <>
+       <div className='App'>
+        <br/>
+      <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; React Grid System</h1>
+      <br/>
      
-      <Grid />
-      <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-      <Grid2 />
-      <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-       <Grid3 />
-       <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-       <Grid4 />
-       <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-       <Grid5 />
-       
-        <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-        <Grid6 />
-        <div><h1>----------------------------------------------------------------------------------------------------------</h1></div>
-        <Grid7 />
+      <BrowserRouter><pre> 
+        <Link to ="/">       Grid1</Link>
+      <Link to ="/Grid2">  Grid2</Link>&nbsp;&nbsp;
+      <Link to ="/Grid3">Grid3</Link>&nbsp;&nbsp;
+      <Link to ="/Grid5">Grid4</Link>&nbsp;&nbsp;
+      <Link to ="/Grid6">Grid5</Link>&nbsp;&nbsp;
+      <Link to ="/Grid7">Grid6</Link>&nbsp;&nbsp;</pre><br/><br/>
+      <Routes>
+        <Route path="/" element={<Grid />} />
+        <Route path="/Grid2" element ={<Grid2 />} />
+        <Route path="/Grid3" element ={<Grid3 />} />
+        <Route path="/Grid4" element ={<Grid4 />} />
+        <Route path="/Grid5" element ={<Grid5 />} />
+        <Route path="/Grid6" element ={<Grid6 />} />
+        <Route path="/Grid7" element ={<Grid7 />} />
+         </Routes>
+      </BrowserRouter>
+    
+        </div>
         </>
   );
 }
