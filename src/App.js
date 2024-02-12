@@ -9,6 +9,7 @@ import Grid4 from './Grid4'
 import Grid5 from './Grid5';
 import Grid6 from './Grid6';
 import Grid7 from './Grid7';
+import MyGrid from './MyGrid';
 
 
 function App() {
@@ -33,18 +34,21 @@ function App() {
       <br/>
      
       <BrowserRouter><pre> 
-        <Link to ="/">       Grid1</Link>
-      <Link to ="/Grid2">  Grid2</Link>&nbsp;&nbsp;
-      <Link to ="/Grid3">Grid3</Link>&nbsp;&nbsp;
-      <Link to ="/Grid5">Grid4</Link>&nbsp;&nbsp;
-      <Link to ="/Grid6">Grid5</Link>&nbsp;&nbsp;
-      <Link to ="/Grid7">Grid6</Link>&nbsp;&nbsp;</pre><br/><br/>
+      <Link to ="/">Grid1</Link> 
+      <Link to ="/Grid1">  Grid2</Link>
+      <Link to ="/Grid2">  Grid3</Link>&nbsp;&nbsp;
+      <Link to ="/Grid3"> Grid4</Link>&nbsp;&nbsp;
+      <Link to ="/Grid4">Grid5</Link>&nbsp;&nbsp;
+      <Link to ="/Grid5">Grid6</Link>&nbsp;&nbsp;
+      <Link to ="/Grid6">Grid7</Link>&nbsp;&nbsp;
+      <Link to ="/Grid7">Grid8</Link>&nbsp;&nbsp;</pre><br/><br/>
       <Routes>
-        <Route path="/" element={<Grid />} />
+        <Route path="/" element ={<Grid />} />
+        <Route path="/Grid1" element ={<MyGrid />} />
         <Route path="/Grid2" element ={<Grid2 />} />
-        <Route path="/Grid3" element ={<Grid3 />} />
+        <Route path="/Grid3" element ={<Grid3/>} />
         <Route path="/Grid4" element ={<Grid4 />} />
-        <Route path="/Grid5" element ={<Grid5 />} />
+        <Route path="/Grid5" element ={<Grid7 />} />
         <Route path="/Grid6" element ={<Grid6 />} />
         <Route path="/Grid7" element ={<Grid7 />} />
          </Routes>
